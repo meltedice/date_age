@@ -1,5 +1,7 @@
 require "date_age/version"
 
-module DateAge
-  # Your code goes here...
+class Date
+  def age_at(date)
+    date.year - self.year
+  end
 end
