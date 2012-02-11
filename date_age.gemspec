@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["ice"]
   s.email       = ["meltedise@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = "date_age-#{s.version}"
+  s.description = "Calculate age with Date class"
 
   s.rubyforge_project = "date_age"
 
@@ -21,4 +21,16 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+
+  if s.respond_to? :specification_version then
+    s.specification_version = 3
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_development_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+    else
+      s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+    end
+  else
+    s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+  end
 end
