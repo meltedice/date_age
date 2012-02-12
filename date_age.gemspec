@@ -23,15 +23,15 @@ Gem::Specification.new do |s|
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency %q<rspec>, ['~> 2.0.0.beta.22']
-    else
-      s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
-    end
-  else
-    s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
-  end
+  # if s.respond_to? :specification_version then
+  #   s.specification_version = 3
+  #
+  #   if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+  #     s.add_development_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+  #   else
+  #     s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+  #   end
+  # else
+  #   s.add_dependency %q<rspec>, ['~> 2.0.0.beta.22']
+  # end
 end
