@@ -1,0 +1,34 @@
+= \DateAge - Age Calculation with Date class
+
+home :: https://github.com/meltedice/date_age
+
+== Description
+
+Calculate age
+
+== Download and installation
+
+The latest version of DateAge can be installed with RubyGems:
+
+  % [sudo] gem install date_age
+
+== Synopsis
+
+To calculate age:
+
+  gem 'date_age'
+  require 'date_age'
+
+  birthday = Date.parse("1989/02/11")
+  puts birthday.age_at("2012/02/12") # => 23
+  puts birthday.age                  # => same as birthday.age_at(Date.today)
+
+== License
+
+DateAge is released under the MIT license.
+
+== Warranty
+
+This software is provided "as is" and without any express or implied
+warranties, including, without limitation, the implied warranties of
+merchantibility and fitness for a particular purpose.
