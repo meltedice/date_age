@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = ""
   s.summary     = "date_age-#{s.version}"
   s.description = "Calculate age with Date class"
+  s.license = 'MIT'
 
   s.rubyforge_project = "date_age"
 
