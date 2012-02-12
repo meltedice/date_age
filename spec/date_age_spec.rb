@@ -34,5 +34,23 @@ describe DateAge do
         birthday("2010/02/02").age_at(today("2011/02/01")).should == 0
       end
     end
+
+    describe "-1 year old" do
+      it "should be -1 years old" do
+        birthday("2011/01/31").age_at(today("2010/02/01")).should == -1
+        birthday("2011/02/01").age_at(today("2010/02/02")).should == -1
+      end
+    end
+
+    # http://en.wikipedia.org/wiki/Leap_year
+    describe "in leap year" do
+      it "should treat birthday Feb. 29th as Mar. 1st in non leap year" do
+        birthday("1996/02/29").age_at(today("2011/02/28")).should == 14
+        birthday("1996/02/29").age_at(today("2011/03/01")).should == 15
+        birthday("1996/02/29").age_at(today("2012/02/28")).should == 15
+        birthday("1996/02/29").age_at(today("2012/02/29")).should == 16
+        birthday("1996/02/29").age_at(today("2012/03/01")).should == 16
+      end
+    end
   end
 end
