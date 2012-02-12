@@ -4,7 +4,9 @@ require 'date_age/version'
 class Date
   # Return age at specified `date`
   def age_at(date)
-    return unless respond_to?(:year) && respond_to?(:month) && respond_to?(:day)
+    unless date.respond_to?(:year) && date.respond_to?(:month) && date.respond_to?(:day)
+      raise ArgumentError, "age_at(date): date should respond to :year, :month and :day"
+    end
     birthday = self
     today    = date
     age = today.year - birthday.year

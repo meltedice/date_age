@@ -52,5 +52,11 @@ describe DateAge do
         birthday("1996/02/29").age_at(today("2012/03/01")).should == 16
       end
     end
+
+    describe "exception" do
+      it "should raise ArgumentError when passed invalid argument" do
+        lambda {Date.today.age_at(nil)}.should raise_error(ArgumentError)
+      end
+    end
   end
 end
